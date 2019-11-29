@@ -1,0 +1,40 @@
+/*
+	Name: imc
+	Copyright: 
+	Author: Ivan Alex
+	Date: 29/11/19 10:39
+	Description: peso / altura ^2
+*/
+#include <stdio.h>
+#include <conio.h>
+main()
+{
+	float imc;
+	float kg;
+	float alt;
+	int cont, i;
+	imc=kg=alt=0;
+	cont=i=0;
+	float vetor[4];
+	
+	while(cont<4)
+	{
+		printf("\nDigite seu peso\n");
+		scanf("%f", &kg);
+		printf("Digite sua altura\n");
+		scanf("%f", &alt); // utilisar %f para números decimais
+		imc=kg/alt*kg/alt;
+		cont=cont+1;
+		vetor[cont]=imc; // insere o imc na posição cont
+		printf("Seu IMC e: %f", imc); // mandei imp
+		
+	}
+	while(i<cont)
+	{	
+	printf("\nIMC da %d",i+1);
+	printf(" resposta: %f", vetor[i+1]);
+	i=i+1;
+	}
+	puts("\n");
+
+}//Fim do programa
